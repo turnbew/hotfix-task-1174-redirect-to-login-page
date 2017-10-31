@@ -1,4 +1,4 @@
-TASK DATE: 29.10.2017 - Finished: 29.10.2017
+TASK DATE: 29.10.2017 - FINISHED: 29.10.2017
 
 TASK SHORT DESCRIPTION: 1174 (redirect to login page)
 
@@ -17,13 +17,21 @@ CHANGES
 			
 				FROM: 
 				
-					$this->template
-							->build('errors/no_permission', $this->data);
+					public function no_permission()
+					{
+						$this->template
+									->build('errors/no_permission', $this->data);
+					}
 					
 				TO:
 			
-					//in hotfix/task-1174-redirect-to-login-page was asked to redirect this site to login site
-					redirect('users/login');
-					
-					//$this->template
-					//    ->build('errors/no_permission', $this->data);
+					public function no_permission()
+					{
+						if (($this->ion_auth->logged_in())) {
+							$this->template
+										->build('errors/no_permission', $this->data);
+						}
+						else {
+							redirect('users/login');
+						}
+					}
