@@ -1,17 +1,18 @@
+FOR PRIVACY AND CODE PROTECTING REASONS THIS IS A SIMPLIFIED VERSION OF CHANGES AND NEW FEATURES
+
 TASK DATE: 29.10.2017 - FINISHED: 29.10.2017
+
+TASK LEVEL: (EASY)  
 
 TASK SHORT DESCRIPTION: 1174 (redirect to login page)
 
 GITHUB REPOSITORY CODE: hotfix/task-1174-redirect-to-login-page
 
-ORIGINAL WORK: https://github.com/BusinessBecause/network-site/tree/hotfix/task-1174-redirect-to-login-page
-
-
 CHANGES
  
 	IN FILES: 
 	
-		\network-site\addons\default\modules\network_settings\controllers\errors.php
+		errors.php
 		
 			CHANGED CODE: 
 			
